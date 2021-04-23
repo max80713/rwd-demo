@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px;
+}
+
+main > .work {
+  width: 100%;
+  padding: 8px;
+}
+
+main > .work__text {
+  width: 100%;
+  padding: 8px;
+}
+
+@media screen and (min-width: 600px) {
+  main > .work {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  
+}

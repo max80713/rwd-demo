@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+}
+
+nav {
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  padding: 16px;
+  display: none;
+}
+
+nav > img {
+  width: 150px;
+  height: 150px;
+}
+
+.content > header {
+  padding: 16px;
+}
+
+.content > header > hr {
+  border: none;
+  border-bottom: 6px solid #ccc;
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    display: block;
+    float: left;
+  }
+
+  .content {
+    float: right;
+    width: calc(100% - 300px);
+  }
+
+  .content > header > .menu {
+    display: none;
+  }
+}
