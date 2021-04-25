@@ -1,3 +1,12 @@
+@keyframes animateleft {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
   font-family: Raleway;
@@ -13,13 +22,54 @@ nav {
   width: 300px;
   height: 100vh;
   background-color: white;
-  padding: 16px;
-  display: none;
+  padding: 16px 0;
 }
 
 nav > img {
-  width: 150px;
-  height: 150px;
+  width: 240px;
+  padding: 0 16px;
+}
+
+nav > h1 {
+  padding: 0 16px;
+}
+
+nav > p {
+  padding: 0 16px;
+  color: #757575;
+}
+
+nav > a.nav-item {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+nav > a.nav-item--active {
+  color: #009688;
+}
+
+nav > a.nav-item:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+nav > a.nav-item > i {
+  width: 20px;
+  text-align: center;
+  margin-right: 16px;
+}
+
+nav > .nav-links {
+  padding: 0 16px;
+  margin-top: 24px;
+}
+
+.content {
+  transition: margin-left 0.4s;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .content > header {
@@ -31,6 +81,49 @@ nav > img {
   border-bottom: 6px solid #ccc;
 }
 
+.content > main {
+  min-height: calc(100vh - 214px);
+}
+
+.content > footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 991px) {
+  nav {
+    display: none;
+    position: fixed;
+    animation: animateleft 0.4s;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .content > header {
+    height: auto;
+  }
+
+  .content > header > .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 36px;
+  }
+
+  .content > header > .menu > img {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @media screen and (min-width: 992px) {
   nav {
     display: block;
@@ -38,8 +131,11 @@ nav > img {
   }
 
   .content {
-    float: right;
-    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+
+  .content > header {
+    height: 120px;
   }
 
   .content > header > .menu {
