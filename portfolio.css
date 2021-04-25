@@ -5,13 +5,22 @@ main {
 }
 
 main > .work {
+  padding: 8px;
+}
+
+main > .work > img {
+  width: 100%;
+}
+
+main > .work-text {
   width: 100%;
   padding: 8px;
 }
 
-main > .work__text {
-  width: 100%;
-  padding: 8px;
+@media screen and (max-width: 599px) {
+  main > .work {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -21,5 +30,4 @@ main > .work__text {
 }
 
 @media screen and (min-width: 992px) {
-  
 }
