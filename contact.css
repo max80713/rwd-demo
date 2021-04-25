@@ -1,0 +1,71 @@
+main {
+  padding: 0 16px;
+}
+
+main > .contacts {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+main > .contacts > .contact {
+  height: 108px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .contacts > .contact:nth-child(2n+1){
+  background-color: #616161;
+}
+
+main > .contacts > .contact:nth-child(2n){
+  background-color: #009688;
+}
+
+main > .contacts > .contact > i {
+  font-size: 36px;
+  margin-top: 16px;
+}
+
+main > form {
+  margin-top: 24px;
+}
+
+main > form > input {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+}
+
+main > button {
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  background-color: #616161;
+  color: white;
+  margin: 24px 0;
+  height: 48px;
+}
+
+main > button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+@media screen and (max-width: 599px) {
+  main > .contacts > .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main > .contacts > .contact {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
